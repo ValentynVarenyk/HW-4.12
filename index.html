@@ -7,27 +7,42 @@
   <title>Таймер зворотного відліку</title>
 </head>
 <body>
-  <div class="timer" id="timer-1">
-    <div class="field">
-      <span class="value" data-value="days">00</span>
-      <span class="label">Days</span>
-    </div>
+  <form class="timer-form">
+  <input
+    class="timer-input"
+    type="number"
+    name="timeCalculator"
+    placeholder="Введи час у секундах"
+    min="1"
+    required
+  >
 
-    <div class="field">
-      <span class="value" data-value="hours">00</span>
-      <span class="label">Hours</span>
-    </div>
+  <button class="timer-button" type="submit">
+    Запустити таймер
+  </button>
+</form>
 
-    <div class="field">
-      <span class="value" data-value="mins">00</span>
-      <span class="label">Minutes</span>
-    </div>
-
-    <div class="field">
-      <span class="value" data-value="secs">00</span>
-      <span class="label">Seconds</span>
-    </div>
+<div class="timer" id="timer-1">
+  <div class="field">
+    <span class="days-value" data-value="days">0</span>
+    <span class="days-label">Дні</span>
   </div>
+
+  <div class="field">
+    <span class="hours-value" data-value="hours">00</span>
+    <span class="hours-label">Години</span>
+  </div>
+
+  <div class="field">
+    <span class="mins-value" data-value="mins">00</span>
+    <span class="mins-label">Хвилини</span>
+  </div>
+
+  <div class="field">
+    <span class="secs-value" data-value="secs">00</span>
+    <span class="secs-label">Секунди</span>
+  </div>
+</div>
 
   <script src="./script.js" type="module"></script>
 </body>
